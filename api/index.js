@@ -1,7 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 
-var app = express()
+var app = express();
+
+app.use(cors());
+app.options('*', cors());
 
 app.listen(3000, () => {
     console.log('Api escuchando en el puerto', 3000);

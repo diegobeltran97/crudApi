@@ -13,7 +13,8 @@ app.listen(3000, () => {
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
-    res.send('hello world')
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ usuario: 'dario' }));
   })
 
 app.get('/user/:user', function (req, res) {

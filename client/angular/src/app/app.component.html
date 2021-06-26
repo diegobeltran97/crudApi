@@ -1,0 +1,9 @@
+  
+  <nav mat-tab-nav-bar class="class2" >
+    <span class="example-button-toggle-label col-xs-3"></span>
+    <a mat-tab-link class="mat-tab-link " style="text-transform: capitalize" *ngFor="let link of links"
+       (click)="activeLink = link"
+       [active]="activeLink == link" routerLink="{{link}}">{{link}}</a>
+  </nav>
+  
+  <router-outlet></router-outlet>

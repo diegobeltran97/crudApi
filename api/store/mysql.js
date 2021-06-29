@@ -81,6 +81,7 @@ function upsert(table, data) {
 
 function query(table, query) {
     return new Promise((resolve, reject) => {
+        console.log('query', query);
         connection.query(`SELECT * FROM ${table} WHERE ?`, query, (err, res) => {
             if (err) return reject(err);
             resolve(res[0] || null);

@@ -7,6 +7,7 @@ const user = require('./components/user/network');
 var app = express();
 
 app.use(cors());
+app.use(bodyParser.json());
 app.options('*', cors());
 
 app.listen(3000, () => {

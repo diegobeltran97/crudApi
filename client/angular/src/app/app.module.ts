@@ -12,6 +12,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {ApiService} from "./home/servicios/api.service";
 import {MatButtonModule} from '@angular/material/button';
+import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatToolbarModule,
     MatIconModule,
     MatTabsModule,
-    MatButtonModule   
+    MatButtonModule,
+    DialogModule,
+    ButtonModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

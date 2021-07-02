@@ -6,18 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  displayModal: boolean = true;
+  value: any;
 
   constructor() { }
  
   ngOnInit(): void {
   }
-  display: boolean = false;
-
-    showDialog() {
-        this.display = true;
-    }
-
+ 
+  showModalDialog() {
+    this.displayModal = true;
+}
  
 
 }

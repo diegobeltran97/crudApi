@@ -16,3 +16,17 @@ p {
 :host ::ng-deep .p-dialog .p-button {
     min-width: 6rem;
 }
+
+:host ::ng-deep .p-password input {
+    width: 25rem
+    
+}
+
+.p-dialog-content{
+    padding-top: 20px;
+}
+
+.h {
+
+    border-top-left-radius: 33px;
+}

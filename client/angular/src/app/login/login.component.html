@@ -1,19 +1,43 @@
-<img src="https://wallpaperaccess.com/full/4556492.jpg" class="img-fluid" alt="..." style="position: absolute; right: 50; top: 50; z-index: -100; width: 100%; height: 100%;">
 
-<button type="button" pButton label="PrimeNG"></button>
+<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
+<div class="h">
+  <p-dialog header=" " [(visible)]="displayModal" [modal]="true" [breakpoints]="{'960px': '75vw','640px': '100vw'}" [style]="{width: '50vw'}" [baseZIndex]="10000" 
+  [draggable]="true" [resizable]="false" [transitionOptions]="'300ms'">
+  
+    <div class="p-dialog-content">
+      <div class="p-d-flex p-flex-column p-flex-md-row">
+  
+        <div class="p-mb-2 p-mr-2">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-user"></i>
+            </span>
+            <span class="p-float-label">
+                <input type="text" id="inputgroup" pInputText [(ngModel)]="value"> 
+                <label for="inputgroup">InputGroup</label>
+            </span>
+          </div>
+        </div>
+  
+        <div class="p-mb-2 p-mr-2" style="padding-top: 40px;">
+          <div class="p-inputgroup" style="width: 379px">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-key"></i>
+            </span>
+            <span class="p-float-label">
+              <p-password inputId="password" [(ngModel)]="value" [feedback]="false" [toggleMask]="true"></p-password>
+              <label for="password">Password</label>
+            </span>
+          </div>
+        </div>
+  
+     </div>
+    </div>
+  
+    <ng-template pTemplate="footer">
+      <button pButton pRipple type="button" class="p-button-lg p-button-rounded p-button-secondary" (click)="displayModal=false" label="Iniciar sesión" style="width:100%"></button>
+    </ng-template>
+  
+  </p-dialog>
+</div>
 
-<p-dialog header="Title" [(visible)]="display">
-  Content
-</p-dialog>
-
-<button type="button" (click)="showDialog()" icon="pi pi-external-link" label="Show">Dialogo</button>
-
-<h5>Basic</h5>
-<p-button label="Submit"></p-button>
-
-<p-button label="Link" styleClass="p-button-link"></p-button>
-
-<h5>Icons</h5>
-<p-button icon="pi pi-check"></p-button>
-<p-button label="Submit" icon="pi pi-check"></p-button>
-<p-button label="Submit" icon="pi pi-check" iconPos="right"></p-button>

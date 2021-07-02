@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from "@angular/forms";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,13 @@ import {ApiService} from "./home/servicios/api.service";
 import {MatButtonModule} from '@angular/material/button';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
+import { InputTextModule } from "primeng/inputtext";
+import { InputMaskModule } from "primeng/inputmask";
+import { InputNumberModule } from "primeng/inputnumber";
+import { InputTextareaModule } from "primeng/inputtextarea";
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from "primeng/divider";
+
 
 @NgModule({
   declarations: [
@@ -26,12 +34,19 @@ import {ButtonModule} from 'primeng/button';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatIconModule,
     MatTabsModule,
     MatButtonModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    InputTextModule,
+    InputMaskModule,
+    InputTextareaModule,
+    InputNumberModule,
+    PasswordModule,
+    DividerModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

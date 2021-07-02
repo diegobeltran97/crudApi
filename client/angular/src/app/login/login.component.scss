@@ -1,0 +1,32 @@
+:host ::ng-deep .p-button {
+    margin: 0 .5rem 0 0;
+    min-width: 10rem;
+}
+
+p {
+    margin: 0;
+}
+
+.confirmation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+    min-width: 6rem;
+}
+
+:host ::ng-deep .p-password input {
+    width: 25rem
+    
+}
+
+.p-dialog-content{
+    padding-top: 20px;
+}
+
+.h {
+
+    border-top-left-radius: 33px;
+}

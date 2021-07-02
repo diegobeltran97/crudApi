@@ -10,8 +10,10 @@ export class AppComponent {
   title = 'lopaspot';
   totalAngularPackages: any;
 
-  links = ['home', 'login'];
+  links = ['Home', 'login'];
+  lanks = ['', 'login'];
   activeLink = this.links[0];
+  activeLinka = this.links[0];
   
   selectedIndex = 0;
 

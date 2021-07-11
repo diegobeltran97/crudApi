@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from './servicios/login.service';
 
 @Component({
   selector: 'app-login',
@@ -6,17 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  displayModal: boolean = true;
+  displayModal: boolean = false;
   value: any;
 
-  constructor() { }
+  constructor(public registro: LoginService) { }
  
   ngOnInit(): void {
+    this.displayModal = this.registro.messages;
   }
  
-  showModalDialog() {
-    this.displayModal = true;
-}
- 
-
 }
